@@ -25,9 +25,15 @@ $tag_name = null;
     </form>
 
     <?php
-    $tag_name = $_POST['tag_name'];
-    performQuery("INSERT INTO tags(tag) VALUES('$tag_name')");
+    if(isset($_POST['tag_name'])){
+      $tag_name = $_POST['tag_name'];
+      performQuery("INSERT INTO tags(tag) VALUES('$tag_name')");
+    }
+
    ?>
+
+<!--- Create new role-->
+
    <form method="post">
         <p> Create new role</p>
         <input type="text" name="role_name"
@@ -35,8 +41,10 @@ $tag_name = null;
         <button type="submit">Create</button>
       </form>
       <?php
+      if(isset($_POST['role_name'])){
         $role_name = $_POST['role_name'];
-        performQuery("INSERT INTO roles(role) VALUES('$role_name')");
+        performQuery("INSERT INTO roles(roel) VALUES('$role_name')");
+      }
        ?>
 
   </body>
