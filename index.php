@@ -12,7 +12,9 @@ include('connect_db.php');
     <nav>
       <a href="index.php">Forside</a>
       <br>
-      <a href="new_item.php">Opret nyt tag</a>
+      <a href="new_tag.php">Opret nyt tag</a>
+      <br>
+      <a href="new_role.php">Opret nyt role</a>
     </nav>
 
     <main>
