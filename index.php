@@ -15,6 +15,9 @@ include('connect_db.php');
       <a href="new_item.php">Opret nyt tag</a>
     </nav>
   asdfjasdfjælkajsdfjadfjælajksdfjææl æasdfj æalsdj
+mik's linje
+
+mik's linje 2x
     <main>
       <?php
         $data = performQuery("SELECT * FROM tags");
