@@ -1,3 +1,7 @@
+<?php
+include('connect_db.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,11 +10,18 @@
   </head>
   <body>
     <nav>
-      Her skal vi have to links - et der linker til forsiden og et til opret produkt siden - jeg tænker vi kan kopier denne nav bar så den kan benyttes på begge sider
+      <a href="index.php">Forside</a>
+      <br>
+      <a href="new_item.php">Opret nyt tag</a>
     </nav>
 
     <main>
-      Her skal vi have visning af produkter
+      <?php
+        $data = performQuery("SELECT * FROM tags");
+        while($row = mysqli_fetch_array($data)) {
+          echo $row['tag'] . "<br>";
+        }
+        ?>
     </main>
   </body>
 </html>
