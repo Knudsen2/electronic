@@ -14,7 +14,7 @@ include('connect_db.php');
       <br>
       <a href="new_item.php">Opret nyt tag</a>
     </nav>
-  
+
     <main>
       <?php
         $data = performQuery("SELECT * FROM tags");
