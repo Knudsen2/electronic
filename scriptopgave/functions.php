@@ -1,15 +1,24 @@
 <?php
 
-function pdo_connect_mysql() {
-    // MySQL info til connect
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'root';
-    $DATABASE_NAME = 'electronics';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	// smider en fejl hvis i ikke har opdateret MySQL korrekt, se linje 4-7
-    	exit('Failed to connect to database!');
+
+function performQuery($sql) {
+  global $mysqli;
+  $result = mysqli_query($mysqli, $sql);
+
+    if ($result) {
+      echo "Query success <br> <br>";
+      return $result;
     }
+    else {
+      echo "<br>Something went wrong";
+      return null;
+    }
+}
+
+
+//debug funktion (sindssygt god at have i alle projekter)
+function debug($data) {
+  echo '<pre>';
+  print_r($data);
+  echo '</pre>';
 }

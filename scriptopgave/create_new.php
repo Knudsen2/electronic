@@ -18,13 +18,20 @@ include('functions.php');
     </nav>
 
     <main>
-      <?php
-        $data = performQuery("SELECT * FROM roles");
-        while($row = mysqli_fetch_array($data)) {
-          echo $row['role'] . "<br>";
-        }
 
-      ?>
+      <form method="post">
+        <p> Create new role</p>
+        <input type="text" name="role_name"
+        placeholder="New role name">
+        <button type="submit">Create</button>
+      </form>
+      <?php
+        if (isset($_POST['role_name'])){
+          $role_name = $_POST['role_name'];
+          performQuery("INSERT INTO roles(role) VALUES('$role_name')");
+        }
+        
+       ?>
     </main>
   </body>
 </html>
