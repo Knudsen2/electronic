@@ -1,8 +1,8 @@
 <?php
 include('connect_db.php');
-$tag_name = null;
+include('functions.php');
+$role_name = null;
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -11,26 +11,18 @@ $tag_name = null;
     <title>Create new role</title>
   </head>
   <nav>
-    <a href="index.php">Frontpage</a>
-    <br>
-    <a href="new_tag.php">Create new tag</a>
-    <br>
-    <a href="new_role.php">Create new role</a>
-    <br>
-    <a href="new_brand.php">Create new brand</a>
+    <?=template_navbar()?>
   </nav>
   <body>
-
     <form method="post">
          <p> Create new role</p>
-         <input type="text" name="role_name"
-         placeholder="New role name">
+         <input type="text" name="role_name" placeholder="Name of new role">
          <button type="submit">Create</button>
-       </form>
+    </form>
        <?php
        if(isset($_POST['role_name'])){
          $role_name = $_POST['role_name'];
-         performQuery("INSERT INTO roles(roel) VALUES('$role_name')");
+         performQuery("INSERT INTO roles(role) VALUES('$role_name')");
        }
 
    ?>

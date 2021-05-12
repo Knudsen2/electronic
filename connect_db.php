@@ -17,7 +17,7 @@
       $result = mysqli_query($mysqli, $sql);
 
       if($result) {
-        echo "Query succes <br>";
+        echo "Query success <br>";
         return $result;
         }
       else {

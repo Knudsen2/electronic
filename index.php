@@ -1,5 +1,6 @@
 <?php
 include('connect_db.php');
+include('functions.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,17 +9,10 @@ include('connect_db.php');
     <meta charset="utf-8">
     <title>Frontpage</title>
   </head>
+  <nav>
+    <?=template_navbar()?>
+  </nav>
   <body>
-    <nav>
-      <a href="index.php">Frontpage</a>
-      <br>
-      <a href="new_tag.php">Create new tag</a>
-      <br>
-      <a href="new_role.php">Create new role</a>
-      <br>
-      <a href="new_brand.php">Create new brand</a>
-    </nav>
-
     <main>
       <?php
         $data = performQuery("SELECT * FROM tags");
