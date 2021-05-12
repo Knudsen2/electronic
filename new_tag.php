@@ -8,22 +8,23 @@ $tag_name = null;
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Opret ny vare</title>
+    <title>Create new tag</title>
   </head>
   <nav>
-    <a href="index.php">Forside</a>
+    <a href="index.php">Frontpage</a>
     <br>
-    <a href="new_tag.php">Opret nyt tag</a>
+    <a href="new_tag.php">Create new tag</a>
     <br>
-    <a href="new_role.php">Opret nyt role</a>
+    <a href="new_role.php">Create new role</a>
+    <br>
+    <a href="new_brand.php">Create new brand</a>
   </nav>
   <body>
-    her skal vi have mulighed for at oprette en ny vare til vores database ved hjælp af PHP og html forms
 
     <form method="post">
-      <p>Opret nyt tag</p>
-      <input type="text" name="tag_name" id="tag_name" placeholder="Navnet på nyt tag">
-      <button type="submit">Opret</button>
+      <p>Create new tag</p>
+      <input type="text" name="tag_name" id="tag_name" placeholder="Name of new tag">
+      <button type="submit">Create</button>
     </form>
 
     <?php

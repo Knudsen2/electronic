@@ -11,9 +11,13 @@ $brand_name = null
     <title>Create new brand</title>
   </head>
   <nav>
-    <a href="index.php">Homepage</a>
+    <a href="index.php">Frontpage</a>
     <br>
-  
+    <a href="new_tag.php">Create new tag</a>
+    <br>
+    <a href="new_role.php">Create new role</a>
+    <br>
+    <a href="new_brand.php">Create new brand</a>
   </nav>
   <body>
 
