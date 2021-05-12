@@ -23,7 +23,7 @@ $brand_name = null
 
     <form method="post">
       <p>Create new brand</p>
-      <input type="text" name="brand" id="brands" placeholder="Name of new brand">
+      <input type="text" name="brand_name" id="brand_name" placeholder="Name of new brand">
       <button type="submit">Create</button>
     </form>
 
