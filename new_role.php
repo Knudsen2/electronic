@@ -14,16 +14,18 @@ $role_name = null;
     <?=template_navbar()?>
   </nav>
   <body>
+
     <form method="post">
-         <p> Create new role</p>
-         <input type="text" name="role_name" placeholder="Name of new role">
-         <button type="submit">Create</button>
+      <p>Create new role</p>
+      <input type="text" name="role_name" id="role_name" placeholder="Name of new role">
+      <button type="submit">Create</button>
     </form>
-       <?php
-       if(isset($_POST['role_name'])){
-         $role_name = $_POST['role_name'];
-         performQuery("INSERT INTO roles(role) VALUES('$role_name')");
-       }
+
+    <?php
+    if(isset($_POST['role_name'])){
+      $role_name = $_POST['role_name'];
+      performQuery("INSERT INTO roles(role) VALUES('$role_name')");
+    }
 
    ?>
   </body>
